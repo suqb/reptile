@@ -4,11 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
 
 /**
  * @author suqb 2023/4/18
+ * 爬取京东商城的商品信息
  */
 public class GetJdGoosMessage {
 
@@ -16,8 +18,14 @@ public class GetJdGoosMessage {
 
         // 加载驱动到jvm
         System.setProperty("webdriver.chrome.driver", "C:\\env\\reptile\\chromedriver_win32\\chromedriver.exe");
+
+        /********************设置不打开浏览器**************************/
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        ChromeDriver driver = new ChromeDriver(chromeOptions);
+        /************************************************************/
         // 初始化驱动
-        ChromeDriver driver = new ChromeDriver();
+//        ChromeDriver driver = new ChromeDriver();
         // 设置爬取网站
         driver.get("https://www.jd.com");
         // 获取经典查询条件输出框
