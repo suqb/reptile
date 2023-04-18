@@ -19,10 +19,10 @@ public class SeleniumBaseUse {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.baidu.com/");
         // 获取class
-        List<WebElement> elements = driver.findElements(By.className("hotsearch-item"));
-        for (WebElement element : elements) {
-            System.out.println(element.getText());
-        }
+//        List<WebElement> elements = driver.findElements(By.className("hotsearch-item"));
+//        for (WebElement element : elements) {
+//            System.out.println(element.getText());
+//        }
 
         // 获取id
 //        WebElement kw = driver.findElement(By.id("kw"));
