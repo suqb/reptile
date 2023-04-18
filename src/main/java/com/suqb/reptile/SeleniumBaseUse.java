@@ -5,8 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 /**
  * @author suqb 2023/4/18
+ * selenium基本用法
  */
 public class SeleniumBaseUse {
 
@@ -16,10 +19,10 @@ public class SeleniumBaseUse {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.baidu.com/");
         // 获取class
-//        List<WebElement> elements = driver.findElements(By.className("hotsearch-item"));
-//        for (WebElement element : elements) {
-//            System.out.println(element.getText());
-//        }
+        List<WebElement> elements = driver.findElements(By.className("hotsearch-item"));
+        for (WebElement element : elements) {
+            System.out.println(element.getText());
+        }
 
         // 获取id
 //        WebElement kw = driver.findElement(By.id("kw"));
@@ -55,8 +58,8 @@ public class SeleniumBaseUse {
 //        }
 
         // xpath选择器
-        WebElement driverElement = driver.findElement(By.xpath("//*[@id=\"kw\"]"));
-        System.out.println(driverElement.getAttribute("class"));
+//        WebElement driverElement = driver.findElement(By.xpath("//*[@id=\"kw\"]"));
+//        System.out.println(driverElement.getAttribute("class"));
 
         // 再文本框中输入内容
 //        WebElement driverElement = driver.findElement(By.id("kw"));

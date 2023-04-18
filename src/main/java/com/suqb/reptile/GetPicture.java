@@ -17,6 +17,7 @@ import java.util.UUID;
 
 /**
  * @author suqb 2023/4/18
+ * 图片爬取
  */
 public class GetPicture {
     public static WebDriver driver = null;
